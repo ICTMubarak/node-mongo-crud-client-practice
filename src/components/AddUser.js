@@ -15,7 +15,11 @@ const AddUser = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            //console.log(data)
+            if(data.acknowledged){
+                window.alert('data insert successfully');
+                event.target.reset();
+            }
         })
 
     }
